@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourist Safety App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌍 Tourist Safety System</h1>
+<input id="searchBox" type="text" placeholder="🔍 Search location..." style="width: 300px; padding: 10px;">
+<button onclick="searchPlace()">Search</button>
+
+<!-- Map -->
+<div id="map"></div>
+
+<!-- Info Panel -->
+<div class="info">
+    <p><strong>Latitude:</strong> <span id="lat">-</span></p>
+    <p><strong>Longitude:</strong> <span id="lng">-</span></p>
+    <p id="status">Status: Safe ✅</p>
+</div>
+
+<!-- SOS Button -->
+<button id="sosBtn">🚨 SOS</button>
+
+<!-- Audio Alert -->
+<audio id="alertSound" src="alert.mp3"></audio>
+
+<script src="script.js"></script>
+
+<!-- ⚠️ Replace YOUR_API_KEY -->
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFg_q-3EJB1f356j40w_x4iOQ6o7faJD4&libraries=places&callback=initMap">
+</script>
+
+</body>
+</html>
